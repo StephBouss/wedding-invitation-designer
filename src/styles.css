@@ -59,6 +59,11 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --font-serif: var(--font-serif);
+  --font-script: var(--font-script);
+  --font-hand: var(--font-hand);
 }
 
 :root {
@@ -151,5 +156,21 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-serif);
+  }
+}
+
+@utility paper {
+  background-image: var(--gradient-paper);
+}
+
+@utility rule-gold {
+  &::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 1px;
+    margin: 1rem auto 0;
+    background: linear-gradient(90deg, transparent, var(--gold-deep), transparent);
   }
 }
