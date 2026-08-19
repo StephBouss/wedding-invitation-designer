@@ -25,7 +25,7 @@ export const submitRsvp = createServerFn({ method: "POST" })
       throw new Error("Connexion Google Sheets indisponible.");
     }
 
-    const url = `${GATEWAY_URL}/spreadsheets/${SPREADSHEET_ID}/values/RSVP!A:E:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`;
+    const url = `${GATEWAY_URL}/spreadsheets/${SPREADSHEET_ID}/values/RSVP!A:E:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`;
 
     const response = await fetch(url, {
       method: "POST",
