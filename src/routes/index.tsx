@@ -4,6 +4,7 @@ import photoCouple from "@/assets/photo-couple.jpg.asset.json";
 import nomCouple from "@/assets/nom-aude-guy-raymond.png.asset.json";
 import { Countdown } from "@/components/Countdown";
 import { Reveal } from "@/components/Reveal";
+import { RsvpForm } from "@/components/RsvpForm";
 
 
 export const Route = createFileRoute("/")({
