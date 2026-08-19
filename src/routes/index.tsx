@@ -4,6 +4,7 @@ import photoCouple from "@/assets/photo-couple.jpg.asset.json";
 import nomCouple from "@/assets/nom-aude-guy-raymond.png.asset.json";
 import { Countdown } from "@/components/Countdown";
 import { Reveal } from "@/components/Reveal";
+import { RsvpForm } from "@/components/RsvpForm";
 
 
 export const Route = createFileRoute("/")({
@@ -215,7 +216,24 @@ function Index() {
       </section>
 
 
+      {/* RSVP */}
+      <section className="border-y border-border bg-secondary/60 px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <Reveal>
+            <SectionTitle>Confirmez votre présence</SectionTitle>
+            <Ornament />
+            <p className="mt-4 font-hand text-lg text-primary sm:text-xl">
+              Merci de nous indiquer vos dates d&apos;arrivée afin de bien vous accueillir.
+            </p>
+          </Reveal>
+          <Reveal delay={120}>
+            <RsvpForm />
+          </Reveal>
+        </div>
+      </section>
+
       <footer className="border-t border-border px-6 py-10 text-center">
+
         <img
           src={nomCouple.url}
           alt="Aude &amp; Guy Raymond"
