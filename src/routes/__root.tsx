@@ -77,11 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Aude & Guy Raymond — Mariage coutumier" },
+      {
+        name: "description",
+        content:
+          "Faire-part du mariage coutumier d'Aude TCHANGO et Guy Raymond KOFFI, le 24 octobre 2026 à Port-Gentil.",
+      },
+      { property: "og:title", content: "Aude & Guy Raymond — Mariage coutumier" },
+      {
+        property: "og:description",
+        content: "24 octobre 2026 à partir de 12h30, domicile familial à Port-Gentil.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
