@@ -216,7 +216,11 @@ function Index() {
 
 
       <footer className="border-t border-border px-6 py-10 text-center">
-        <p className="font-script text-3xl text-primary">Aude &amp; Guy Raymond</p>
+        <img
+          src={nomCouple.url}
+          alt="Aude &amp; Guy Raymond"
+          className="mx-auto w-full max-w-xs sm:max-w-sm"
+        />
         <p className="mt-2 font-serif text-sm tracking-[0.2em] uppercase text-muted-foreground">
           24 Octobre 2026 — Port-Gentil
         </p>
