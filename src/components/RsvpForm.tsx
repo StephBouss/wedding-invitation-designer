@@ -50,15 +50,15 @@ export function RsvpForm() {
 
   if (done) {
     return (
-      <div className="mt-8 rounded-sm border border-gold-deep/50 bg-card px-6 py-10 text-center">
-        <p className="font-script text-3xl text-primary">Merci !</p>
-        <p className="mt-3 font-serif text-lg text-muted-foreground">
+      <div className="mt-8 rounded-sm border border-gold-deep/50 bg-primary px-6 py-10 text-center">
+        <p className="font-script text-3xl text-gold">Merci !</p>
+        <p className="mt-3 font-serif text-lg text-primary-foreground">
           Votre confirmation a bien été enregistrée. Au plaisir de vous accueillir.
         </p>
         <button
           type="button"
           onClick={() => setDone(false)}
-          className="mt-6 font-serif text-sm tracking-[0.15em] uppercase text-gold-deep hover:underline"
+          className="mt-6 font-serif text-sm tracking-[0.15em] uppercase text-gold hover:underline"
         >
           Envoyer une autre réponse
         </button>
@@ -133,7 +133,7 @@ export function RsvpForm() {
         <button
           type="submit"
           disabled={loading}
-          className="mt-2 inline-flex items-center justify-center rounded-sm bg-primary px-8 py-3 font-serif text-base tracking-[0.15em] uppercase text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 disabled:opacity-60"
+          className="mt-2 inline-flex items-center justify-center rounded-sm bg-gold px-8 py-3 font-serif text-base tracking-[0.15em] uppercase text-primary transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-deep disabled:opacity-60"
         >
           {loading ? "Envoi en cours..." : "Confirmer ma présence"}
         </button>

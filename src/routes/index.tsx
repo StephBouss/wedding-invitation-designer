@@ -55,9 +55,17 @@ function Ornament() {
   );
 }
 
-function SectionTitle({ children }: { children: React.ReactNode }) {
+function SectionTitle({
+  children,
+  className = "text-primary",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <h2 className="text-center font-serif text-3xl font-semibold tracking-wide text-primary sm:text-4xl">
+    <h2
+      className={`text-center font-serif text-3xl font-semibold tracking-wide sm:text-4xl ${className}`}
+    >
       {children}
     </h2>
   );
@@ -114,25 +122,25 @@ function Index() {
       </header>
 
       {/* Date, heure, lieu */}
-      <section className="border-y border-border bg-secondary/60 px-6 py-14">
+      <section className="border-y border-gold-deep/30 bg-primary px-6 py-14">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <p className="font-hand text-xl text-primary">Qui se tiendra le</p>
+            <p className="font-hand text-xl text-gold">Qui se tiendra le</p>
           </Reveal>
           <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-4">
             <Reveal delay={80}>
-              <p className="font-serif text-5xl font-bold text-primary">24</p>
-              <p className="mt-1 font-serif text-sm tracking-[0.25em] uppercase text-muted-foreground">
+              <p className="font-serif text-5xl font-bold text-gold">24</p>
+              <p className="mt-1 font-serif text-sm tracking-[0.25em] uppercase text-primary-foreground">
                 Octobre 2026
               </p>
             </Reveal>
-            <Reveal delay={160} className="sm:border-x sm:border-border">
-              <p className="font-serif text-sm text-muted-foreground">à partir de</p>
-              <p className="font-serif text-5xl font-bold text-primary">12h30</p>
+            <Reveal delay={160} className="sm:border-x sm:border-gold-deep/30">
+              <p className="font-serif text-sm text-primary-foreground">à partir de</p>
+              <p className="font-serif text-5xl font-bold text-gold">12h30</p>
             </Reveal>
             <Reveal delay={240}>
-              <p className="font-serif text-sm text-muted-foreground">Au domicile familial à</p>
-              <p className="mt-1 font-serif text-3xl font-bold text-primary">Port-Gentil</p>
+              <p className="font-serif text-sm text-primary-foreground">Au domicile familial à</p>
+              <p className="mt-1 font-serif text-3xl font-bold text-gold">Port-Gentil</p>
             </Reveal>
           </div>
         </div>
@@ -217,12 +225,12 @@ function Index() {
 
 
       {/* RSVP */}
-      <section className="border-y border-border bg-secondary/60 px-6 py-16">
+      <section className="border-y border-gold-deep/30 bg-primary px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <SectionTitle>Confirmez votre présence</SectionTitle>
+            <SectionTitle className="text-gold">Confirmez votre présence</SectionTitle>
             <Ornament />
-            <p className="mt-4 font-hand text-lg text-primary sm:text-xl">
+            <p className="mt-4 font-hand text-lg text-gold sm:text-xl">
               Merci de nous indiquer vos dates d&apos;arrivée afin de bien vous accueillir.
             </p>
           </Reveal>
