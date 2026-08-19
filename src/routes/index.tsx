@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import couronne from "@/assets/couronne.png.asset.json";
 import photoCouple from "@/assets/photo-couple.jpg.asset.json";
+import { Countdown } from "@/components/Countdown";
+import { Reveal } from "@/components/Reveal";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
