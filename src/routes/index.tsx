@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import couronne from "@/assets/couronne.png.asset.json";
 import photoCouple from "@/assets/photo-couple.jpg.asset.json";
+import nomCouple from "@/assets/nom-aude-guy-raymond.png.asset.json";
 import { Countdown } from "@/components/Countdown";
 import { Reveal } from "@/components/Reveal";
 
@@ -98,9 +99,13 @@ function Index() {
           </p>
 
           <div className="mt-8">
-            <h1 className="shimmer-text font-script text-5xl leading-tight text-primary sm:text-6xl md:text-7xl">
-              Aude <span className="align-middle">&amp;</span> Guy Raymond
-            </h1>
+            <h1 className="sr-only">Aude &amp; Guy Raymond</h1>
+            <img
+              src={nomCouple.url}
+              alt="Aude &amp; Guy Raymond"
+              className="shimmer-text mx-auto w-full max-w-md sm:max-w-lg md:max-w-2xl"
+              aria-hidden="true"
+            />
           </div>
 
           <Countdown />
@@ -211,7 +216,11 @@ function Index() {
 
 
       <footer className="border-t border-border px-6 py-10 text-center">
-        <p className="font-script text-3xl text-primary">Aude &amp; Guy Raymond</p>
+        <img
+          src={nomCouple.url}
+          alt="Aude &amp; Guy Raymond"
+          className="mx-auto w-full max-w-xs sm:max-w-sm"
+        />
         <p className="mt-2 font-serif text-sm tracking-[0.2em] uppercase text-muted-foreground">
           24 Octobre 2026 — Port-Gentil
         </p>
